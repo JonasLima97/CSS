@@ -1,0 +1,34 @@
+$primary:steelblue;
+
+@mixin teste($bgc, $color){
+    background-color: $bgc;
+    color: $color;
+    height: 30%;
+    width: 30%;
+}
+
+.divpai{
+    background-color: bisque;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-around;
+}
+
+.div1{
+    @include teste(blue,white );
+    &:hover{
+        background-color:$primary;
+        color:red;
+    }
+}
+
+.div2{
+    @include teste(green,yellow )
+}
+
+.div3{
+    @extend .div1;
+}
